@@ -6,15 +6,15 @@ namespace SoccerApp.Domain.Test.ValueObjects
     public class CpfTests
     {
         [Fact(DisplayName = "Ensure that CPF is Valid")]
-        public void EnsureThatCpfIsValid()
+        public void Ensure_that_tpf_is_valid()
         {
-            var number = "945.775.105-10";
+            var number = "839.402.340-10";
 
             Assert.True(new Cpf(number).ToString() == number);
         }
 
         [Fact(DisplayName = "Ensure that invalid CPF throws an exception")]
-        public void EnsureThatInvalidCpfThrowsAnEcxeption()
+        public void Ensure_that_invalid_cpf_throws_an_ecxeption()
         {
             var number = "940.770.100-15";
 

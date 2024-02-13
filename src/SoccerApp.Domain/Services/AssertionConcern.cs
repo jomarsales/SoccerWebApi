@@ -94,6 +94,11 @@ namespace SoccerApp.Domain.Services
             if (value.Value.CompareTo(maximun) > 0 || value.Value.CompareTo(minimum) < 0) throw new Exception(message);
         }
 
+        public static void AssertCollectionDoNotContainsValue<T>(T value, IEnumerable<T> possibleValues, string message)
+        {
+            if (possibleValues.Contains(value)) throw new Exception(message);
+        }
+
         public static void AssertCollectionContainsValue<T>(T value, IEnumerable<T> possibleValues, string message)
         {
             if(!possibleValues.Contains(value)) throw new Exception(message);
@@ -111,6 +116,5 @@ namespace SoccerApp.Domain.Services
                 throw new Exception(error.Message);
             }
         }
-
     }
 }

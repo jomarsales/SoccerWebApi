@@ -9,6 +9,11 @@ namespace SoccerApp.Domain.Entities
 
         public string Name { get; private set; }
 
+        public virtual ICollection<SoccerTeam> SoccerTeams { get; private set; }
+        public virtual ICollection<Payment> Payments { get; private set; }
+
+        protected SoccerPlayer() { }
+
         public SoccerPlayer(string name)
         {
             AssertionConcern.AssertNotNull(name, "O nome do jogador é requerido.");

@@ -3,11 +3,11 @@ using SoccerApp.Domain.ValueObjects;
 
 namespace SoccerApp.Domain.Test.Entities
 {
-    public class TeamTests
+    public class SoccerTeamTests
     {
-        private Team CreateTeam()
+        public static SoccerTeam CreateTeam()
         {
-            var team = new Team("Team1", Month.January);
+            var team = new SoccerTeam("Team1", Month.January);
 
             team.SoccerPlayers.Add(new FullSoccerPlayer("Soccer1", new Cpf("725.354.410-20")));
             team.SoccerPlayers.Add(new FullSoccerPlayer("Soccer2", new Cpf("535.676.590-81")));

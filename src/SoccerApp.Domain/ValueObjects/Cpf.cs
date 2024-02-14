@@ -8,6 +8,8 @@ namespace SoccerApp.Domain.ValueObjects
     {
         public long Number { get; private set; }
 
+        protected Cpf() { }
+
         public Cpf(string number)
         {
             AssertionConcern.AssertTrue(ValidateCPF(number), "CPF Inválido!");

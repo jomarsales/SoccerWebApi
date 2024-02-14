@@ -6,6 +6,8 @@ namespace SoccerApp.Domain.Entities
     {
         public Cpf? Cpf { get; private set; }
 
+        protected FullSoccerPlayer() { }
+
         public FullSoccerPlayer(string name, Cpf? cpf = null) : base(name)
         {
         }
